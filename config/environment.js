@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: { 'connect-src' : "'self' http://localhost:3000"},
     modulePrefix: 'gem-store-client',
     environment: environment,
     baseURL: '/',
