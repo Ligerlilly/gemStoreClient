@@ -2,11 +2,11 @@
   <h2 id="title">Welcome to Ember.js</h2>
   <ul class='list-unstyled'>
     {{#each gem in model}}
-      <li>{{gem.name}}</li>
+      <li>{{#link-to 'gems.show' gem }}{{gem.name}}{{/link-to}}</li>
       <li>Quantity: {{gem.quantity}}</li>
       <li>Price: {{gem.price}}</li>
       <br>
     {{/each}}
   </ul>
+  {{outlet}}
 </div>
-{{outlet}}
