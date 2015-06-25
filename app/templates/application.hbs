@@ -1,12 +1,12 @@
-<div class='container'>
-  <h2 id="title">Welcome to Ember.js</h2>
-  <ul class='list-unstyled'>
-    {{#each gem in model}}
-      <li>{{#link-to 'gems.show' gem }}{{gem.name}}{{/link-to}}</li>
-      <li>Quantity: {{gem.quantity}}</li>
-      <li>Price: {{gem.price}}</li>
-      <br>
-    {{/each}}
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li class='navbar-brand'>{{#link-to 'gems'}}Gem Store{{/link-to}}</li>
   </ul>
+</nav>
+<div class='container'>
+  <div class='jumbotron'>
+    <h1 id="title">Welcome to Gem Store</h1>
+  </div>
+  <br>
   {{outlet}}
 </div>

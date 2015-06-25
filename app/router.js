@@ -6,8 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('gems', function(){
-    this.route('show', { path: '/:gem_id'});
+  this.resource('gems', { path: '/' }, function(){
+    this.route('create');
+  });
+  this.resource('gem', { path: '/:gem_id' }, function(){
+    this.route('edit');
   });
 });
 
