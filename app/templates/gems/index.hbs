@@ -1,0 +1,12 @@
+{{#each gem in model}}
+  <div class='col-md-6'>
+    <ul class='list-unstyled'>
+      <li>{{#link-to 'gem.index' gem}}{{gem.name}}{{/link-to}}</li>
+      <li>Description: {{gem.description}}</li>
+      <li>Quantity: {{gem.quantity}}</li>
+      <li>Price: {{gem.price}}</li>
+      <br>
+    </ul>
+  </div>
+{{/each}}
+{{outlet}}

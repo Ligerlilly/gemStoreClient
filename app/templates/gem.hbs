@@ -1,6 +1,10 @@
 <ul class='list-unstyled'>
   <li><h1>{{model.name}}</h1></li>
+  <li>Description: {{model.description}}</li>
   <li>Price: {{model.price}}</li>
   <li>Qty: {{model.quantity}}</li>
-  <li><a href='#' {{action 'edit'}}>edit</a></li>
+  <!-- <li><a href='#' {{action 'edit' model}}>edit</a></li> -->
+  {{#link-to 'gem.edit' model.id}}edit{{/link-to}}
 </ul>
+
+{{outlet}}

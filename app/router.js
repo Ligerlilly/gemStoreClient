@@ -8,10 +8,16 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('gems', { path: '/' }, function(){
     this.route('create');
+
   });
-  this.resource('gem', { path: '/:gem_id' }, function(){
+  this.resource('gem', { path: 'gems/:gem_id' }, function(){
     this.route('edit');
   });
+
+
+
+
+
 });
 
 export default Router;

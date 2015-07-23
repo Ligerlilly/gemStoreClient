@@ -1,0 +1,16 @@
+<div class='gem-edit' >
+  <form>
+    <label>Gem: name</label>
+    {{input value=model.name}}
+
+    <label>Gem: description</label>
+    {{textarea value=model.description}}
+
+    <label>Gem: quantity</label>
+    {{input value=model.quantity}}
+
+    <label>Gem: price</label>
+    {{input value=model.price}}
+    <button {{action "save" }}> save </button>
+  </form>
+</div>
