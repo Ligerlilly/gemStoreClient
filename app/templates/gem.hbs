@@ -3,8 +3,15 @@
   <li>Description: {{model.description}}</li>
   <li>Price: {{model.price}}</li>
   <li>Qty: {{model.quantity}}</li>
-  <!-- <li><a href='#' {{action 'edit' model}}>edit</a></li> -->
-  {{#link-to 'gem.edit' model.id}}edit{{/link-to}}
 </ul>
-
+<!-- <li><a href='#' {{action 'edit' model}}>edit</a></li> -->
+{{#link-to 'gem.edit' model.id}}edit{{/link-to}}
+<a href='#' {{action 'delete'}}>delete</a>
+{{#if deleteMode}}
+<div  class='confirm-box'>
+  <h4>Really?</h4>
+  <button {{action 'confirmDelete'}}>yes</button>
+  <button {{action 'cancelDelete'}}>no</button>
+</div>
+{{/if}}
 {{outlet}}
