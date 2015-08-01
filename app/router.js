@@ -18,6 +18,9 @@ Router.map(function() {
 
 
 
+  this.route('gems', function() {
+    this.route('create');
+  });
 });
 
 export default Router;
